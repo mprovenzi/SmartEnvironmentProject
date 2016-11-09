@@ -1,0 +1,85 @@
+{	
+	"V": ["wkdayT0", "wkdayT1", "hourT0", "hourT1", "locatT0", "locatT1"],
+	"E": [	["wkdayT0", "wkdayT1"],
+			["hourT0", "hourT1"],
+			["locatT0", "locatT1"]],
+	"Vdata": {
+		"locatT1": {
+			"ord": 5,
+			"numoutcomes": 4,
+			"vals": ["Idle", "Bed", "Hall", "Both"],
+			"parents": ["locatT0"],
+			"children": None,
+			"cprob": {
+				"['Idle']": [.4, .3, .2, .1],
+				"['Bed']":  [.3, .4, .1, .2],
+				"['Hall']": [.3, .1, .4, .2],
+				"['Both']": [.1, .2, .4, .3]
+			}
+		},
+		
+		"locatT0": {
+			"ord": 4,
+			"numoutcomes": 4,
+			"vals": ["Idle", "Bed", "Hall", "Both"],
+			"parents": None,
+			"children": ["locatT1"],
+			"cprob": [.5, .2, .2, .1]
+		},
+
+		"hourT1": {
+			"ord": 3,
+			"numoutcomes": 8,
+			"vals": ["0to3", "3to6", "6to9", "9to12", "12to15", "15to18", "18to21", "21to24"],
+			"parents": ["hourT0"],
+			"children": None,
+			"cprob": {
+				"['0to3']":   [.7, .2, .1, .0, .0, .0, .0, .0],
+				"['3to6']":   [.0, .7, .2, .1, .0, .0, .0, .0],
+				"['6to9']":   [.0, .0, .7, .2, .1, .0, .0, .0],
+				"['9to12']":  [.0, .0, .0, .7, .2, .1, .0, .0],
+				"['12to15']": [.0, .0, .0, .0, .7, .2, .1, .0],
+				"['15to18']": [.0, .0, .0, .0, .0, .7, .2, .1],
+				"['18to21']": [.1, .0, .0, .0, .0, .0, .7, .2],
+				"['21to24']": [.2, .1, .0, .0, .0, .0, .0, .7]
+			}
+		},
+		
+		"hourT0": {
+			"ord": 2,
+			"numoutcomes": 8,
+			"vals": ["0to3", "3to6", "6to9", "9to12", "12to15", "15to18", "18to21", "21to24"],
+			"parents": None,
+			"children": ["hourT1"],
+			"cprob": [.1, .1, .2, .05, .05, .1, .2, .2]
+		},
+
+		"wkdayT1": {
+			"ord": 1,
+			"numoutcomes": 2,
+			"vals": ["Weekday", "Weekend"],
+			"parents": ["wkdayT0"],
+			"children": None,
+			"cprob": {
+				"['Weekday']": [.8, .2],
+				"['Weekend']": [.3, .7]
+			}
+		},
+		
+		"wkdayT0": {
+			"ord": 0,
+			"numoutcomes": 2,
+			"vals": ["Weekday", "Weekend"],
+			"parents": None,
+			"children": ["wkdayT1"],
+			"cprob": [.7, .3]
+		}
+	}
+}
+
+
+
+
+
+
+

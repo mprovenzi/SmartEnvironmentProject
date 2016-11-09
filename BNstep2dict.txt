@@ -1,0 +1,83 @@
+{	
+	"V": ["activT0", "activT1", "wkdayT1", "hourT1", "locatT1"],
+	"E": [	["activT0", "activT1"],
+			["activT1", "wkdayT1"],
+			["activT1", "hourT1"],
+			["activT1", "locatT1"]],
+	"Vdata": {
+		"locatT1": {
+			"ord": 4,
+			"numoutcomes": 4,
+			"vals": ["Idle", "Bed", "Hall", "Both"],
+			"parents": ["activT1"],
+			"children": None,
+			"cprob": {
+				"['Away']":      [.6,  .05, .2,  .15],
+				"['Sleeping']":  [.35, .35, .1,  .2],
+				"['Wandering']": [.1,  .2,  .35, .35],
+				"['Reading']":   [.35, .35, .15, .15],
+				"['Diverse']":   [.3,  .1,  .3,  .3]
+			}
+		},
+
+		"hourT1": {
+			"ord": 3,
+			"numoutcomes": 8,
+			"vals": ["0to3", "3to6", "6to9", "9to12", "12to15", "15to18", "18to21", "21to24"],
+			"parents": ["activT1"],
+			"children": None,
+			"cprob": {
+				"['Away']":      [.05, .05, .15, .25, .2,  .15, .1,  .05],
+				"['Sleeping']":  [.2,  .2,  .1,  .05, .05, .1,  .15, .15],
+				"['Wandering']": [.2,  .35, .15, .05, .05, .05, .05, .1],
+				"['Reading']":   [.15, .05, .05, .1,  .1,  .15, .2,  .2],
+				"['Diverse']":   [.1,  .05, .15, .1,  .1,  .1,  .2,  .2]
+			}
+		},
+
+		"wkdayT1": {
+			"ord": 2,
+			"numoutcomes": 2,
+			"vals": ["Weekday", "Weekend"],
+			"parents": ["activT1"],
+			"children": None,
+			"cprob": {
+				"['Away']":      [.6,  .4],
+				"['Sleeping']":  [.4,  .6],
+				"['Wandering']": [.5,  .5],
+				"['Reading']":   [.3,  .7],
+				"['Diverse']":   [.25, .75]
+			}
+		},
+		
+		"activT1": {
+			"ord": 1,
+			"numoutcomes": 5,
+			"vals": ["Away", "Sleeping", "Wandering", "Reading", "Diverse"],
+			"parents": ["activT0"],
+			"children": ["locatT1", "hourT1", "wkdayT1"],
+			"cprob": {
+				"['Away']":      [.6, .05, .05, .15, .15],
+				"['Sleeping']":  [.1, .6,  .2,  .05, .05],
+				"['Wandering']": [.2, .3,  .4,  .05, .05],
+				"['Reading']":   [.2, .2,  .1,  .35, .15],
+				"['Diverse']":   [.25, .1, .05, .25, .35]
+			}
+		},
+		
+		"activT0": {
+			"ord": 0,
+			"numoutcomes": 5,
+			"vals": ["Away", "Sleeping", "Wandering", "Reading", "Diverse"],
+			"parents": None,
+			"children": ["activT1"],
+			"cprob": [.3, .3, .15, .1, .15]
+		}
+	}
+}
+
+
+
+
+
+
