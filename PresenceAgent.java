@@ -26,7 +26,7 @@ public class PresenceAgent extends Agent {
 	private int[] estadoP1 = new int[2];
 	private int[] estadoM2 = new int[2];
 	private int[] estadoP2 = new int[2];
-	private final static String pwd = "14896255";
+	private final static String pwd = "xxx";
 	private String[] colleagues = new String[10];
 	private String[] colleagues_info = new String[50];
 	private String my_presence = "";
