@@ -26,8 +26,8 @@ public class DataBaseAgent extends Agent {
 	private MessageTemplate templateLA;
 	private MessageTemplate templatePA;
 	
-	private Channel LAchannel = new Channel(170130, "QC1X4LJKESD9BYBK");
-	private Channel PAchannel = new Channel(170140, "O1DSN4U03QVBUPCW");
+	private Channel LAchannel = new Channel(xxx, "xxx");
+	private Channel PAchannel = new Channel(xxx, "xxx");
 	private long[] LAuploadtime = new long[2];
 	private long[] PAuploadtime = new long[2];
 	private boolean LAuploadflag = false;
@@ -36,12 +36,12 @@ public class DataBaseAgent extends Agent {
 	// light agent
 	private final static int LAfieldLS 	= 1; // light sensor field 
 	private final static int LAfieldLB 	= 2; // light bulb
-	private final static int LAfieldUE1 = 3; // user entry lb
+	private final static int LAfieldUE1 	= 3; // user entry lb
 	private final static int LAfieldAT1	= 4; // automated entry lb
 	private final static int LAfieldTL 	= 5; // table light
-	private final static int LAfieldUE2 = 6; // user entry tl
-	private final static int LAfieldAT2 = 7; // automated entry tl
-	private final static int LAfieldUC  = 8; // user change 
+	private final static int LAfieldUE2 	= 6; // user entry tl
+	private final static int LAfieldAT2 	= 7; // automated entry tl
+	private final static int LAfieldUC  	= 8; // user change 
 	// presence agent
 	private final static int PAfieldPres= 1; // presence 
 	private final static int PAfieldM1 	= 2; // movement sensor 1
@@ -58,7 +58,7 @@ public class DataBaseAgent extends Agent {
 	private int[] DBestadoTL	= new int[2];
 	private int[] DBestadoUE2	= new int[2];
 	private int[] DBestadoAT2	= new int[2];
-	private int[] DBestadoUC    = new int[2];
+	private int[] DBestadoUC    	= new int[2];
 	
 	// presence agent variables
 	private int[] DBestadoPres 	= new int[2]; 
