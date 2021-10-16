@@ -8,11 +8,9 @@
 #include <ESP8266WiFi.h>
 
 // dados da rede de wifi
-const char* ssid = "House18";
-const char* password = "thespinney";
+const char* ssid = "xxx";
+const char* password = "xxx";
 
-//const char* ssid = "Dlink CAROL";
-//const char* password = "93420864";
 WiFiClient  client;
 String s = "";
 
@@ -39,7 +37,7 @@ byte pin_sensor_presence_trig = 16;
 // servidor para onde outros dispositivos enviarão informações
 // Create an instance of the server, specify the port to listen on as an argument
 WiFiServer server(80);
-const char* password8266 = "/14896255";
+const char* password8266 = "/xxx";
 
 #define DEBOUCING_INTERVAL_MS 200
 
