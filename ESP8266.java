@@ -27,9 +27,9 @@ import java.io.PrintWriter;
 
 public class ESP8266 extends Agent {
 	private Logger myLogger = Logger.getMyLogger(getClass().getName());
-	private final static String myESP1ip = "192.168.0.102";
-	private final static String myESP2ip = "192.168.0.103";
-	private final static String pwd = "14896255";
+	private final static String myESP1ip = "xxx.xxx.x.xxx";
+	private final static String myESP2ip = "xxx.xxx.x.xxy";
+	private final static String pwd = "xxx";
 	private final static String presence_type = "Presence estimation";
 	private final static String light_type    = "Light Control";
 	private static int[] mysensors = {0, 1, 2, 3, 4, 5};
